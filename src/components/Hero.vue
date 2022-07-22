@@ -5,7 +5,7 @@
       <h1 class="txt__gradient-blue">{{name}}</h1>
       <h2 class="hero__content-iam">
         <span>I am a </span>
-        <span class="txt__gradient-orange hero__content-job">Frontend Developer</span>
+        <span class="txt__gradient-orange hero__content-job" ref="job">Frontend Developer</span>
       </h2>
       <p class="hero__content-intro">
         I like to build amazing websites for humans 💻💻. Currently, I'm focusing on improving my coding skills in HTML CSS, and Vuejs 🔥🔥. In another hand I'm learning Node js to have knowledge about Back-end, I hope in the shortest time I can become a full-stack developer (Maybe 5 to 7 years later 😂😂)
@@ -51,6 +51,7 @@
   </section>
 </template>
 <script>
+
 export default {
   name: "Hero",
   data() {
@@ -61,9 +62,55 @@ export default {
         github: "https://github.com/nguyenvinhtieng",
         email: "mailto:vinhtieng123@gmail.com?subject=Contact to Vinh Tieng&body=Hello! I visited your website and..."
       },
-      name: "Nguyen Vinh Tieng"
+      name: "Nguyen Vinh Tieng",
+      indexTitle: 0,
+      styleTyping: true,
+      firtsTime: true,
+      lenghtJob: 1,
+      jobIndex: 0,
+      jobs: [
+        {
+          title: "Frontend Developer",
+          status: true
+        },
+        {
+          title: "Student",
+          status: false
+        }
+      ]
     };
-  }
+  },
+  methods: {
+    async changeJob() {
+      let activeJob = this.jobs[this.jobIndex].title
+      if(this.indexTitle < activeJob.length && this.styleTyping) {
+        this.jobEl.innerHTML += activeJob[this.indexTitle]
+        this.indexTitle += 1;
+        this.firtsTime = false
+      }
+      else if(!this.styleTyping){
+        this.jobEl.innerHTML = this.jobEl.innerHTML.slice(0, -1);
+        this.indexTitle -= 1;
+      }
+      else if(this.indexTitle == activeJob.length){
+        this.styleTyping = false;
+      }
+      if(this.indexTitle == 0 && !this.firtsTime) {
+        this.styleTyping = true;
+        if(this.jobIndex == this.lenghtJob){
+          this.jobIndex = 0;
+        }else{
+          this.jobIndex += 1;
+        }
+      }
+      setTimeout(this.changeJob, 200)
+    }
+  },
+  mounted() {
+    this.jobEl = this.$refs.job;
+    this.jobEl.innerHTML = "";
+    this.changeJob();
+  },
 };
 </script>
 <style>
