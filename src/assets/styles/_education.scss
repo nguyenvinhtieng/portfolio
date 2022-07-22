@@ -1,0 +1,57 @@
+.edu{
+  border-bottom: 2px solid rgba(255,255,255,.75);
+  padding: 100px 0;
+}
+
+.edu__road{
+  margin-top: 80px;
+  padding-left: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.edu__road:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  background-color: coral;
+  border-radius: 2px;
+}
+.edu__item{
+  margin-bottom: 100px;
+  position: relative;
+}
+.edu__item::before{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;  
+  background-color: coral;
+  top: 50%;
+  right: 100%;
+  border-radius: 100rem;
+  transform: translate(-50% ,-50%);
+}
+.edu__item::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;  
+  background-color: coral;
+  top: 50%;
+  right: calc(100% + 8px);
+  border-radius: 2px;
+  transform: translate(-50% ,-50%);
+}
+.edu__time{
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.edu__place{
+  font-size: 20px;
+  font-weight: bold;
+}

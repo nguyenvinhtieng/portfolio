@@ -1,0 +1,58 @@
+header{
+  max-height: 50px;
+  margin: 16px 0;
+}
+.header__logo{
+  max-height: 100%;
+}
+.header__logo svg{
+  max-height: 100%;
+  width: 150px;
+  animation: fill 3s linear infinite;
+}
+@keyframes strokeOutline{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 318;
+  stroke-dashoffset: 318;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 61;
+  stroke-dashoffset: 61;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 249;
+  stroke-dashoffset: 249;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 207;
+  stroke-dashoffset: 207;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 313;
+  stroke-dashoffset: 313;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 299;
+  stroke-dashoffset: 299;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 431;
+  stroke-dashoffset: 431;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
+#logo path:nth-child(8) {
+  stroke-dasharray: 190;
+  stroke-dashoffset: 190;
+  animation: strokeOutline 3s cubic-bezier(0,0,0,1.15) infinite;
+}
