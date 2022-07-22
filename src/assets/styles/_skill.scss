@@ -52,7 +52,6 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 200px;
 }
 
 .skill__img {
@@ -94,9 +93,6 @@
   .skill__list{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 12px;
-  }
-  .skill__item{
-    height: 150px;
   }
   .skill__ability{
     display: grid;
