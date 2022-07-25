@@ -40,3 +40,18 @@ body{
   font-weight: bold;
   text-align: center;
 }
+.is-sp{
+  display: none;
+}
+.is-pc{
+  display: block;
+}
+@media screen and (max-width: 768px){
+  .is-sp{
+    display: block;
+  }
+  .is-pc{
+    display: none;
+  }
+
+} 

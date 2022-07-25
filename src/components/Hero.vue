@@ -5,6 +5,7 @@
       <h1 class="txt__gradient-blue">{{name}}</h1>
       <h2 class="hero__content-iam">
         <span>I am a </span>
+        <br class="is-sp">
         <span class="txt__gradient-orange hero__content-job" ref="job">Frontend Developer</span>
       </h2>
       <p class="hero__content-intro">
@@ -16,7 +17,7 @@
       <div class="hero__contact">
         <h3 class="hero__contact-heading txt__gradient-orange">Contact me at :</h3>
         <div class="hero__contact-list">
-          <a class="btn__animate-01 hero__btn facebook" :href="contact.facebook" target="_blank" rel="noopener noreferrer">
+          <a class="btn__animate-01 hero__btn facebook" :href="contact.facebook" target="_blank" rel="noopener noreferrer" >
             <span class="hero__btn-ico">
               <ion-icon name="logo-facebook"></ion-icon>
             </span>
@@ -45,7 +46,7 @@
     </div>
     <div class="hero__img">
       <div class="hero__img-inner">
-        <img src="/avatar.png" alt="">
+        <img src="/images/avatar.png" alt="">
       </div>
     </div>
   </section>
@@ -64,7 +65,7 @@ export default {
       },
       name: "Nguyen Vinh Tieng",
       indexTitle: 0,
-      styleTyping: true,
+      styleTyping: true, // true => word typing | false => typing revert
       firtsTime: true,
       lenghtJob: 1,
       jobIndex: 0,
@@ -74,9 +75,13 @@ export default {
           status: true
         },
         {
+          title: "Designer",
+          status: false
+        },
+        {
           title: "Student",
           status: false
-        }
+        },
       ]
     };
   },
@@ -97,7 +102,7 @@ export default {
       }
       if(this.indexTitle == 0 && !this.firtsTime) {
         this.styleTyping = true;
-        if(this.jobIndex == this.lenghtJob){
+        if(this.jobIndex == this.jobs.length - 1){
           this.jobIndex = 0;
         }else{
           this.jobIndex += 1;

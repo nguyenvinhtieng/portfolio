@@ -25,7 +25,10 @@ export default {
     Education,
     Project,
     Skill
-  }
+  },
+  mounted() {
+    document.title = "❣️Vinh Tieng | Portfolio❣️";
+  },
 }
 </script>
 

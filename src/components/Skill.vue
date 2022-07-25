@@ -16,9 +16,9 @@
       </div>
     </div>
     <div class="skill__list">
-      <div v-for="skill in skills" :item="skill" :key="skill"  :class="['skill__item', skill.level]">
+      <div v-for="skill in skills" :item="skill" :key="skill" :class="['skill__item', skill.level]">
         <div class="skill__img">
-          <img :src="`/${skill.img}`" :alt="skill.name">
+          <img :src="`/images/${skill.img}`" :alt="skill.name">
         </div>
       </div>
     </div>

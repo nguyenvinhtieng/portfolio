@@ -2,16 +2,123 @@
   padding: 100px 0;
   border-bottom: 2px solid rgba(255,255,255,.75);
 }
-.comming-soon{
-  text-align: center;
-  padding: 20px 8px;
-  margin: 50px 0;
-  background-color: rgba(0, 255, 98, 0.1);
-  border-radius: 16px;
-  line-height: 1.6;
+
+.project__list{
+  margin-top: 50px;
 }
-.comming-soon a{
-  color: inherit;
+.project__card{
+  width: 100%;
+  background-color: #fff;
+  margin: 0 6px;
+  min-height: 500px;
+  height: 500px;
+  border-radius: 16px;
+  padding: 16px;
+  color: #111827;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.project__img{
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+  max-height: 200px;
+}
+.project__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project__content{
+  flex: 1;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.project__name{
   font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+.project__desc{
+  text-align: left;
+}
+.project__tech{
+  text-align: left;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project__tech-item{
+  width: fit-content;
+  padding: 1px 6px 1px 26px;
+  margin-right: 12px;
+  border-radius: 4px;
+  height: fit-content;
+  border: 1px solid rgba(58, 135, 243, 0.7);
+  color: rgba(58, 135, 243, 1);
+  transition: all 0.2s linear;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.project__tech-ic{
+  margin-right: 4px;
+}
+.project__tech-txt{
+  position: relative;
   font-size: 14px;
+}
+.project__tech-txt:before{
+  content: "\2713";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -16px;
+}
+.project__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.project__link-item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.2s linear;
+}
+.project__link-item:hover{
+  opacity: 0.7;
+}
+.project__link-item.github{
+  margin-right: 4px;
+  background-image: linear-gradient(to right, #000000, #161414);
+}
+.project__link-item.demo{
+  margin-left: 4px;
+  background-image: linear-gradient(to right, #3A87F3, #2d9187);
+}
+.project__link-item.unavaiable{
+  background-color: rgb(185, 185, 185) !important;
+}
+.project__link-ico{
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .project__card{
+    border-radius: 6px;
+  }
 }

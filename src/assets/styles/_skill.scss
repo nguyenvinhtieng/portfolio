@@ -68,6 +68,7 @@
   inset: 0;
   background-color: rgba(17, 24, 39, 0.7);
   transition: all 0.2s linear;
+  z-index: 1;
 }
 .skill__item:hover .skill__img::before{
   background-color: transparent;
