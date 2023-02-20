@@ -46,7 +46,7 @@
     </div>
     <div class="hero__img">
       <div class="hero__img-inner">
-        <img src="/images/avatar.png" alt="">
+        <img src="/images/avatar.jpg" alt="">
       </div>
     </div>
   </section>

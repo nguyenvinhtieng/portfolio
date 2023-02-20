@@ -62,14 +62,7 @@
   justify-content: center;
   align-items: center;
 }
-.skill__img::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(17, 24, 39, 0.7);
-  transition: all 0.2s linear;
-  z-index: 1;
-}
+
 .skill__item:hover .skill__img::before{
   background-color: transparent;
 }
@@ -78,16 +71,16 @@
   max-height: 100%;
 }
 .skill__item.basic{
-  border: 2px solid rgba(255, 193, 7, 0.3);
+  border: 4px solid rgba(255, 193, 7, 0.3);
 }
 .skill__item.medium{
-  border: 2px solid rgba(7, 205, 255, 0.3);
+  border: 4px solid rgba(7, 205, 255, 0.3);
 }
 .skill__item.strong{
-  border: 2px solid rgba(119, 255, 7, 0.3);
+  border: 4px solid rgba(119, 255, 7, 0.3);
 }
 .skill__item.master{
-  border: 2px solid rgba(255, 7, 7, 0.3);
+  border: 4px solid rgba(255, 7, 7, 0.3);
 }
 
 @media screen and (max-width: 768px){

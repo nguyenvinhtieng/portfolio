@@ -1,0 +1,36 @@
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.background-animation span {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: -600px 100px 300px rgba(45, 145, 135, 0.2),
+  100px -100px 400px rgba(58, 135, 243, 0.2),
+  100px 400px 400px rgba(250, 234, 13, 0.1);
+  animation: animate 20s linear infinite;
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(800%, 0) rotate(360deg);
+  }
+  50% {
+    transform: translate(800%, 800%) rotate(720deg);
+  }
+  75% {
+    transform: translate(0, 800%) rotate(1080deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(1440deg);
+  }
+}
